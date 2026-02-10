@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-10T13:27:22.127Z",
+  "generatedAt": "2026-02-10T13:35:08.403Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,8 +11,8 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Make the site-wide background image render darker so foreground content and the bubble overlay decorations stand out more, by adding a dark overlay/gradient on top of the existing background images for both desktop and mobile/portrait breakpoints (without changing the image filenames or removing the fixed/cover/no-repeat behavior).",
+        "id": "REQ-2",
+        "summary": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/index.css"

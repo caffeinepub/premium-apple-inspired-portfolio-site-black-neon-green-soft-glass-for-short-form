@@ -1,5 +1,5 @@
 {
-  "frontend/src/index.css": "Global styles with OKLCH color system, neon green accents, glass-surface utilities, and site-wide fixed neon bubble background with 50% dark overlay applied to both desktop and mobile/portrait variants via linear-gradient layering.",
+  "frontend/src/index.css": "Global styles with OKLCH color system, neon green accents, glass-surface utilities, and site-wide fixed neon bubble background with 70% dark overlay applied to both desktop and mobile/portrait variants via linear-gradient layering.",
   "frontend/tailwind.config.js": "Extended Tailwind configuration with neon green color tokens, glass shadow utilities, custom animations (float, glow), and Apple-inspired design system.",
   "frontend/src/App.tsx": "Main application component that renders the single-page portfolio layout with all sections (Hero, About, Portfolio, Services, Testimonials, Contact) with transparent root container to allow the global background to show through.",
   "frontend/src/hooks/useTheme.ts": "Custom hook for managing dark/light theme state with localStorage persistence and DOM class application.",

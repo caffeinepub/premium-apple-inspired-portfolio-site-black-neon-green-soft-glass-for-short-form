@@ -1,37 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Darken the global site background",
+  "title": "Darken the site-wide background overlay",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Make the site-wide background image render darker so foreground content and the bubble overlay decorations stand out more, by adding a dark overlay/gradient on top of the existing background images for both desktop and mobile/portrait breakpoints (without changing the image filenames or removing the fixed/cover/no-repeat behavior).",
+      "id": "REQ-2",
+      "text": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-6"
         ],
         "quotes": [
-          "make background darker"
+          "make it darker"
         ]
       },
       "acceptanceCriteria": [
-        "On desktop sizes, the global background (currently set on the `html` element in `frontend/src/index.css`) is visibly darker than before while still showing the neon green lines/bubbles.",
-        "On mobile/portrait sizes (the existing `@media (max-width: 768px), (orientation: portrait)` rule), the mobile background is also visibly darker than before.",
-        "The background still uses cover, centered positioning, no-repeat, and fixed attachment as it did previously.",
-        "Foreground sections and the existing bubble overlay decorations remain visible and are not obscured by the darkening approach (i.e., darkening is applied only to the background rendering)."
+        "In frontend/src/index.css, the linear-gradient overlay alpha values applied to the html background-image are increased (darker) for both the default and the mobile/portrait @media rule.",
+        "The background images remain exactly: /assets/generated/site-background-neon-bubbles.dim_1920x1080.png and /assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png.",
+        "The background properties remain in effect: background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed.",
+        "Foreground content (text/buttons/cards) remains readable and the bubble overlay decorations remain visible against the darker background."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under `frontend/src/components/ui` (read-only).",
-    "Do not modify files listed as immutable paths in SYSTEM_CONTEXT (e.g., `frontend/src/main.tsx`, `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useActor.ts`).",
-    "Keep the existing background image asset paths exactly as they are: `/assets/generated/site-background-neon-bubbles.dim_1920x1080.png` and `/assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png`.",
-    "No backend changes (Motoko) are needed for this request."
+    "Do not edit files listed as immutable in SYSTEM_CONTEXT (e.g., frontend/src/main.tsx, frontend/src/hooks/useActor.ts, frontend/src/hooks/useInternetIdentity.ts, frontend/src/components/ui).",
+    "Do not change the background image filenames/paths or remove fixed/cover/no-repeat behavior from the global background styling."
   ],
   "nonGoals": [
-    "Regenerating or editing the background image assets themselves (apply darkening via CSS instead).",
-    "Changing bubble overlay image assets or their positions/opacities unless required to prevent unintended occlusion from the darkening overlay."
+    "Adding new pages, sections, or features unrelated to darkening the background.",
+    "Changing backend logic (backend/main.mo) or adding persistence/auth features.",
+    "Replacing or regenerating background images instead of adjusting the overlay darkness."
   ],
   "imageRequirements": {
     "required": [],

@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Make the global site background render darker on both desktop and mobile/portrait so foreground content and bubble overlays stand out more.
+**Goal:** Darken the site-wide background by increasing the opacity of the existing global overlay gradient while keeping the same background images and behaviors.
 
 **Planned changes:**
-- Update `frontend/src/index.css` to apply a dark overlay/gradient on top of the existing desktop background image (set on the `html` element) without changing the image path or existing cover/center/no-repeat/fixed behavior.
-- Update the existing mobile/portrait media rule (`@media (max-width: 768px), (orientation: portrait)`) to apply the same darkening approach on top of the mobile background image, preserving existing background behavior.
+- Update `frontend/src/index.css` to increase the alpha values of the `linear-gradient` overlay applied to the `html` `background-image` for the default (desktop) styling.
+- Update `frontend/src/index.css` to increase the alpha values of the `linear-gradient` overlay applied to the `html` `background-image` within the mobile/portrait `@media` rule.
+- Ensure the background image paths and global background behaviors (cover/center/no-repeat/fixed) remain unchanged and that foreground content stays readable.
 
-**User-visible outcome:** The site background appears noticeably darker on desktop and mobile/portrait while still showing the neon bubble/line visuals, and foreground sections plus bubble overlay decorations remain clearly visible.
+**User-visible outcome:** The site background appears noticeably darker on both desktop and mobile/portrait layouts, improving contrast while keeping the same bubble background visuals and readable foreground content.

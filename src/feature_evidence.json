@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-make-the-site-wide-background-image-render-darker-so-foreground-content-and-the-bubble-overlay-decorations-stand-out-more-by-adding-a-dark-overlay-gradient-on-top-of-the-existing-background-images-for-both-desktop-and-mobile-portrait-breakpoints-without-changing-the-image-filenames-or-removing-the-fixed-cover-no-repeat-behavior",
-      "featureTitle": "Make the site-wide background image render darker so foreground content and the bubble overlay decorations stand out more, by adding a dark overlay/gradient on top of the existing background images for both desktop and mobile/portrait breakpoints (without changing the image filenames or removing the fixed/cover/no-repeat behavior).",
+      "featureId": "feature-increase-the-darkness-of-the-site-wide-background-by-making-the-existing-overlay-gradient-on-the-global-html-background-more-opaque-on-both-desktop-and-mobile-portrait-breakpoints-in-frontend-src-index-css-without-changing-the-background-image-filenames-or-the-fixed-cover-no-repeat-behavior",
+      "featureTitle": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
       "files": [
         "frontend/src/index.css"
       ],
@@ -15,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
+        "REQ-2"
       ],
       "confidence": "high"
     }

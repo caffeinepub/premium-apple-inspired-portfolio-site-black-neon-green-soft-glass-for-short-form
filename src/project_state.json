@@ -7,10 +7,10 @@
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-make-the-site-wide-background-image-render-darker-so-foreground-content-and-the-bubble-overlay-decorations-stand-out-more-by-adding-a-dark-overlay-gradient-on-top-of-the-existing-background-images-for-both-desktop-and-mobile-portrait-breakpoints-without-changing-the-image-filenames-or-removing-the-fixed-cover-no-repeat-behavior",
-      "title": "Make the site-wide background image render darker so foreground content and the bubble overlay decorations stand out more, by adding a dark overlay/gradient on top of the existing background images for both desktop and mobile/portrait breakpoints (without changing the image filenames or removing the fixed/cover/no-repeat behavior).",
+      "id": "feature-increase-the-darkness-of-the-site-wide-background-by-making-the-existing-overlay-gradient-on-the-global-html-background-more-opaque-on-both-desktop-and-mobile-portrait-breakpoints-in-frontend-src-index-css-without-changing-the-background-image-filenames-or-the-fixed-cover-no-repeat-behavior",
+      "title": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
       "reqIds": [
-        "REQ-1"
+        "REQ-2"
       ],
       "version": 1
     }
@@ -18,12 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Make the website background image darker (increase darkness/contrast so bubbles stand out more)",
+      "summary": "Make the background/tone darker",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Darken the global site background",
+  "projectName": "Darken the site-wide background overlay",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
