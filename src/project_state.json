@@ -5,12 +5,29 @@
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Recolor to a bright green and black Apple-bubble theme while retaining a glossy, floating-bubble look (site-background-neon-bubbles.dim_1920x1080.png > site-background-neon-bubbles-green-black.dim_1920x1080.png)\n- Recolor to a matching bright green and black Apple-bubble theme for mobile/portrait (site-background-neon-bubbles-mobile.dim_1080x1920.png > site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png)\n- Recolor bubble overlay elements to match bright green and black theme while keeping transparency suitable for overlay usage (bubble-overlays-transparent.dim_1024x1024.png > bubble-overlays-transparent-green-black.dim_1024x1024.png)",
   "existing_features": [
     {
-      "id": "feature-increase-the-darkness-of-the-site-wide-background-by-making-the-existing-overlay-gradient-on-the-global-html-background-more-opaque-on-both-desktop-and-mobile-portrait-breakpoints-in-frontend-src-index-css-without-changing-the-background-image-filenames-or-the-fixed-cover-no-repeat-behavior",
-      "title": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
+      "id": "feature-update-the-site-wide-background-to-keep-the-existing-apple-style-bubble-aesthetic-but-switch-the-palette-to-bright-green-and-black-including-both-desktop-and-mobile-portrait-backgrounds",
+      "title": "Update the site-wide background to keep the existing Apple-style bubble aesthetic but switch the palette to bright green and black, including both desktop and mobile/portrait backgrounds.",
       "reqIds": [
         "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-floating-bubble-decorative-overlays-to-match-the-bright-green-and-black-apple-bubble-theme-so-the-hero-section-background-decor-visually-matches-the-new-site-wide-background",
+      "title": "Update floating bubble decorative overlays to match the bright green and black Apple-bubble theme so the hero section background decor visually matches the new site-wide background.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-adjust-the-global-background-overlay-gradient-in-global-css-as-needed-so-the-bright-green-black-bubble-background-remains-readable-behind-content-while-preserving-the-apple-bubble-aesthetic",
+      "title": "Adjust the global background overlay/gradient (in global CSS) as needed so the bright green + black bubble background remains readable behind content while preserving the Apple-bubble aesthetic.",
+      "reqIds": [
+        "REQ-4"
       ],
       "version": 1
     }
@@ -18,12 +35,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Make the background/tone darker",
+      "summary": "Update background to match Apple bubble theme using bright green and black color palette",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Darken the site-wide background overlay",
+  "projectName": "Update Apple bubble background to bright green and black theme",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

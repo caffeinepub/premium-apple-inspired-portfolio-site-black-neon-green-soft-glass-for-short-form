@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-increase-the-darkness-of-the-site-wide-background-by-making-the-existing-overlay-gradient-on-the-global-html-background-more-opaque-on-both-desktop-and-mobile-portrait-breakpoints-in-frontend-src-index-css-without-changing-the-background-image-filenames-or-the-fixed-cover-no-repeat-behavior",
-      "featureTitle": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
+      "featureId": "feature-update-the-site-wide-background-to-keep-the-existing-apple-style-bubble-aesthetic-but-switch-the-palette-to-bright-green-and-black-including-both-desktop-and-mobile-portrait-backgrounds",
+      "featureTitle": "Update the site-wide background to keep the existing Apple-style bubble aesthetic but switch the palette to bright green and black, including both desktop and mobile/portrait backgrounds.",
       "files": [
         "frontend/src/index.css"
       ],
@@ -16,6 +16,42 @@
       ],
       "testIds": [
         "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-floating-bubble-decorative-overlays-to-match-the-bright-green-and-black-apple-bubble-theme-so-the-hero-section-background-decor-visually-matches-the-new-site-wide-background",
+      "featureTitle": "Update floating bubble decorative overlays to match the bright green and black Apple-bubble theme so the hero section background decor visually matches the new site-wide background.",
+      "files": [
+        "frontend/src/components/visual/BackgroundDecor.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-adjust-the-global-background-overlay-gradient-in-global-css-as-needed-so-the-bright-green-black-bubble-background-remains-readable-behind-content-while-preserving-the-apple-bubble-aesthetic",
+      "featureTitle": "Adjust the global background overlay/gradient (in global CSS) as needed so the bright green + black bubble background remains readable behind content while preserving the Apple-bubble aesthetic.",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
       ],
       "confidence": "high"
     }

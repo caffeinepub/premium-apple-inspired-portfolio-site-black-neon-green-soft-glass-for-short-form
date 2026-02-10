@@ -14,7 +14,7 @@ export function SiteFooter() {
           {/* Social Links */}
           <div className="flex items-center gap-6">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/bizgrowth.studio/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-xl glass-surface hover:text-neon hover:shadow-neon transition-all"

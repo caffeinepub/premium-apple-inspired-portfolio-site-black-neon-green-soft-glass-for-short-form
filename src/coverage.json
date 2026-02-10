@@ -1,18 +1,46 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-10T13:35:08.403Z",
+  "generatedAt": "2026-02-10T15:23:05.956Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 3,
+    "implemented": 3,
     "items": [
       {
         "id": "REQ-2",
-        "summary": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
+        "summary": "Update the site-wide background to keep the existing Apple-style bubble aesthetic but switch the palette to bright green and black, including both desktop and mobile/portrait backgrounds.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/site-background-neon-bubbles-green-black.dim_1920x1080.png",
+          "frontend/public/assets/generated/site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/site-background-neon-bubbles-green-black.dim_1920x1080.png",
+          "frontend/public/assets/generated/site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png",
+          "frontend/src/index.css"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Update floating bubble decorative overlays to match the bright green and black Apple-bubble theme so the hero section background decor visually matches the new site-wide background.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/bubble-overlays-transparent-green-black.dim_1024x1024.png",
+          "frontend/src/components/visual/BackgroundDecor.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/bubble-overlays-transparent-green-black.dim_1024x1024.png",
+          "frontend/src/components/visual/BackgroundDecor.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Adjust the global background overlay/gradient (in global CSS) as needed so the bright green + black bubble background remains readable behind content while preserving the Apple-bubble aesthetic.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/index.css"
@@ -28,6 +56,10 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/bubble-overlays-transparent-green-black.dim_1024x1024.png",
+    "frontend/public/assets/generated/site-background-neon-bubbles-green-black.dim_1920x1080.png",
+    "frontend/public/assets/generated/site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png",
+    "frontend/src/components/visual/BackgroundDecor.tsx",
     "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",

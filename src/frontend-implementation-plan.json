@@ -1,22 +1,67 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Darken site-wide background overlay gradient",
+  "title": "Bright green + black Apple-bubble background and overlays update",
   "requirements": [
     {
       "id": "REQ-2",
-      "summary": "Increase the opacity of the global html linear-gradient overlay (default and mobile/portrait) to darken the site-wide background without changing image paths or background behavior.",
+      "summary": "Switch site-wide Apple-bubble background palette to bright green + black for both desktop and mobile/portrait.",
       "acceptanceCriteria": [
-        "In frontend/src/index.css, the linear-gradient overlay alpha values applied to the html background-image are increased (darker) for both the default and the mobile/portrait @media rule.",
-        "The background images remain exactly: /assets/generated/site-background-neon-bubbles.dim_1920x1080.png and /assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png.",
-        "The background properties remain in effect: background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed.",
-        "Foreground content (text/buttons/cards) remains readable and the bubble overlay decorations remain visible against the darker background."
+        "Desktop background uses a bright green + black Apple-bubble style image and retains a similar glossy/bubble look to the current design.",
+        "Mobile/portrait background uses a matching bright green + black Apple-bubble style image.",
+        "No broken image URLs; background renders on initial load without layout shift."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/site-background-neon-bubbles-green-black.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the recolored desktop Apple-bubble background asset (green/black glossy bubbles) per imageRequirements edits so the CSS can reference it without broken URLs."
+        },
+        {
+          "path": "frontend/public/assets/generated/site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png",
+          "operation": "create",
+          "description": "Add the recolored mobile/portrait Apple-bubble background asset (green/black glossy bubbles) per imageRequirements edits so responsive CSS can reference it without broken URLs."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update the global html background-image URLs to use the new generated assets at frontend/public/assets/generated/site-background-neon-bubbles-green-black.dim_1920x1080.png and frontend/public/assets/generated/site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png; preserve existing cover/center/no-repeat/fixed behavior and ensure initial-load stability (no layout shift)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Update hero floating bubble decorative overlays to match the new bright green + black bubble theme while keeping readability.",
+      "acceptanceCriteria": [
+        "Hero section floating bubble overlays match the updated bright green + black bubble style.",
+        "Decor remains subtle (similar opacity levels) and does not reduce text readability in the hero section."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/bubble-overlays-transparent-green-black.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the recolored transparent bubble overlay asset (green/black, overlay-safe transparency) per imageRequirements edits for use in the hero decorative layer."
+        },
+        {
+          "path": "frontend/src/components/visual/BackgroundDecor.tsx",
+          "operation": "modify",
+          "description": "Update BackgroundDecor overlay image references to use frontend/public/assets/generated/bubble-overlays-transparent-green-black.dim_1024x1024.png; keep existing opacity levels/positions/animations to maintain subtle decor and preserve hero text readability."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Tune the global overlay/gradient so the new green/black bubble background remains readable in light and dark modes without washing out accents.",
+      "acceptanceCriteria": [
+        "Text and key UI elements remain readable over the new background in both light and dark theme modes.",
+        "Overlay does not fully wash out the bright green accents; bubbles remain visible.",
+        "Background remains fixed/cover behavior as currently implemented."
       ],
       "file_operations": [
         {
           "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Increase the rgba alpha values in the html background-image linear-gradient overlay for both the default rule and the (max-width: 768px)/(orientation: portrait) @media rule (e.g., raise from 0.5 to a darker value). Keep the background image URLs exactly as /assets/generated/site-background-neon-bubbles.dim_1920x1080.png and /assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png, and preserve background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed."
+          "description": "Adjust the global background overlay/gradient layered over the bubble background (e.g., theme-aware opacity via :root vs .dark) to ensure content contrast in both modes while keeping bright green accents and bubble visibility; preserve background-attachment: fixed and existing cover behavior."
         }
       ]
     }

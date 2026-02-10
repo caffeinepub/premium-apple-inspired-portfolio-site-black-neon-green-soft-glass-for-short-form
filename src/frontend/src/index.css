@@ -68,11 +68,11 @@
     
     html {
         scroll-behavior: smooth;
-        /* Site-wide neon bubble background with dark overlay */
+        /* Site-wide bright green and black bubble background with dark overlay */
         background-color: oklch(0.10 0 0);
         background-image: 
             linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url('/assets/generated/site-background-neon-bubbles.dim_1920x1080.png');
+            url('/assets/generated/site-background-neon-bubbles-green-black.dim_1920x1080.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -85,7 +85,7 @@
         html {
             background-image: 
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png');
+                url('/assets/generated/site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png');
         }
     }
     

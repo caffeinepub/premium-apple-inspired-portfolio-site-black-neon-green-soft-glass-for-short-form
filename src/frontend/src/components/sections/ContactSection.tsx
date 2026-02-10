@@ -109,7 +109,7 @@ export function ContactSection() {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/bizgrowth.studio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-xl glass-surface hover:border-neon hover:text-neon transition-all"

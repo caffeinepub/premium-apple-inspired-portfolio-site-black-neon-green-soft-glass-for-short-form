@@ -1,39 +1,77 @@
 {
   "kind": "build_request",
-  "title": "Darken the site-wide background overlay",
+  "title": "Update Apple bubble background to bright green and black theme",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-2",
-      "text": "Increase the darkness of the site-wide background by making the existing overlay gradient on the global HTML background more opaque on both desktop and mobile/portrait breakpoints (in frontend/src/index.css), without changing the background image filenames or the fixed/cover/no-repeat behavior.",
+      "text": "Update the site-wide background to keep the existing Apple-style bubble aesthetic but switch the palette to bright green and black, including both desktop and mobile/portrait backgrounds.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "msg-user-1"
         ],
         "quotes": [
-          "make it darker"
+          "make back ground in same apple boubble theme but in bright green abd black colour"
         ]
       },
       "acceptanceCriteria": [
-        "In frontend/src/index.css, the linear-gradient overlay alpha values applied to the html background-image are increased (darker) for both the default and the mobile/portrait @media rule.",
-        "The background images remain exactly: /assets/generated/site-background-neon-bubbles.dim_1920x1080.png and /assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png.",
-        "The background properties remain in effect: background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed.",
-        "Foreground content (text/buttons/cards) remains readable and the bubble overlay decorations remain visible against the darker background."
+        "Desktop background uses a bright green + black Apple-bubble style image and retains a similar glossy/bubble look to the current design.",
+        "Mobile/portrait background uses a matching bright green + black Apple-bubble style image.",
+        "No broken image URLs; background renders on initial load without layout shift."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Update floating bubble decorative overlays to match the bright green and black Apple-bubble theme so the hero section background decor visually matches the new site-wide background.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "make back ground in same apple boubble theme but in bright green abd black colour"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section floating bubble overlays match the updated bright green + black bubble style.",
+        "Decor remains subtle (similar opacity levels) and does not reduce text readability in the hero section."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Adjust the global background overlay/gradient (in global CSS) as needed so the bright green + black bubble background remains readable behind content while preserving the Apple-bubble aesthetic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "make back ground in same apple boubble theme but in bright green abd black colour"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Text and key UI elements remain readable over the new background in both light and dark theme modes.",
+        "Overlay does not fully wash out the bright green accents; bubbles remain visible.",
+        "Background remains fixed/cover behavior as currently implemented."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files listed as immutable in SYSTEM_CONTEXT (e.g., frontend/src/main.tsx, frontend/src/hooks/useActor.ts, frontend/src/hooks/useInternetIdentity.ts, frontend/src/components/ui).",
-    "Do not change the background image filenames/paths or remove fixed/cover/no-repeat behavior from the global background styling."
+    "Do not edit files under frontend/src/components/ui (compose existing UI components instead).",
+    "Do not edit immutable hook/bootstrap paths listed in SYSTEM_CONTEXT (e.g., frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx).",
+    "Backend is single-actor; no backend changes are required for this request."
   ],
   "nonGoals": [
-    "Adding new pages, sections, or features unrelated to darkening the background.",
-    "Changing backend logic (backend/main.mo) or adding persistence/auth features.",
-    "Replacing or regenerating background images instead of adjusting the overlay darkness."
+    "Changing typography, layout, or section content beyond what is necessary to maintain readability on the new background.",
+    "Adding new authentication, data storage, or backend features."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": []
+    "edits": [
+      "Recolor to a bright green and black Apple-bubble theme while retaining a glossy, floating-bubble look (site-background-neon-bubbles.dim_1920x1080.png > site-background-neon-bubbles-green-black.dim_1920x1080.png)",
+      "Recolor to a matching bright green and black Apple-bubble theme for mobile/portrait (site-background-neon-bubbles-mobile.dim_1080x1920.png > site-background-neon-bubbles-mobile-green-black.dim_1080x1920.png)",
+      "Recolor bubble overlay elements to match bright green and black theme while keeping transparency suitable for overlay usage (bubble-overlays-transparent.dim_1024x1024.png > bubble-overlays-transparent-green-black.dim_1024x1024.png)"
+    ]
   }
 }

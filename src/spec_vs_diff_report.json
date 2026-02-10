@@ -1,28 +1,29 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-10T13:35:08.400Z",
-  "summary": "REQ-2 appears implemented by setting a darker (more opaque) linear-gradient overlay (rgba alpha 0.7) on the global html background-image for both the default and the mobile/portrait @media rule, while keeping the specified background image URLs and preserving cover/center/no-repeat/fixed behavior. Two additional files were modified (frontend-file-summaries.txt and project_state.json) that are not requested by the BuildRequest.",
+  "generatedAt": "2026-02-10T15:23:05.953Z",
+  "summary": "The diff implements the requested bright green + black bubble backgrounds (desktop and mobile), updates the hero floating bubble overlays to use the new green/black overlay asset, and adds a dark gradient overlay while preserving fixed/cover background behavior. Some additional global theme tokens and utility classes were also added beyond the stated requirements.",
   "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Modified internal tracking/metadata file project_state.json (e.g., new_feature_requests entries marked pending) despite the BuildRequest only requesting a CSS overlay darkness adjustment.",
-      "reason": "No requirement in the BuildRequest asks to update project tracking/state files; only frontend/src/index.css overlay alpha values were requested.",
+      "description": "Added/changed broad global design tokens (OKLCH CSS variables) and introduced neon/glass-related utility classes not explicitly requested (e.g., --neon, --neon-glow, .glass-surface, .neon-glow, .neon-text).",
+      "reason": "BuildRequest focuses on swapping background/overlay imagery and adjusting the global background overlay/gradient for readability; it does not request adding new styling utilities or expanding the design token system.",
       "evidence": [
-        "project_state.json"
+        "frontend/src/index.css"
       ]
     },
     {
-      "description": "Updated/generated broad frontend file summaries in frontend-file-summaries.txt, including descriptions of many components and features unrelated to darkening the background overlay.",
-      "reason": "The BuildRequest does not request documentation/summary generation; only a specific CSS change in frontend/src/index.css.",
+      "description": "Expanded global reduced-motion handling to broadly override animation/transition durations.",
+      "reason": "Not requested by BuildRequest; unrelated to updating background images/overlays.",
       "evidence": [
-        "frontend-file-summaries.txt"
+        "frontend/src/index.css"
       ]
     }
   ],
-  "confidence": 0.72,
+  "confidence": 0.74,
   "changed_files": [
     "frontend-file-summaries.txt",
+    "frontend/src/components/visual/BackgroundDecor.tsx",
     "frontend/src/index.css",
     "project_state.json"
   ]
