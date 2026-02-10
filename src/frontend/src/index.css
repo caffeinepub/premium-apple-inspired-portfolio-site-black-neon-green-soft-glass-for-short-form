@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1.25rem;
+        /* Light mode - clean white with neon green accents */
+        --background: 0.98 0 0;
+        --foreground: 0.15 0 0;
+        --card: 1 0 0 / 60%;
+        --card-foreground: 0.15 0 0;
+        --popover: 0.98 0 0;
+        --popover-foreground: 0.15 0 0;
+        --primary: 0.15 0 0;
+        --primary-foreground: 0.98 0 0;
+        --secondary: 0.95 0 0;
+        --secondary-foreground: 0.15 0 0;
+        --muted: 0.95 0 0;
+        --muted-foreground: 0.50 0 0;
+        --accent: 0.95 0 0;
+        --accent-foreground: 0.15 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.88 0 0 / 20%;
+        --input: 0.88 0 0 / 30%;
+        --ring: 0.75 0.30 145;
+        /* Neon green accent */
+        --neon: 0.75 0.30 145;
+        --neon-glow: 0.75 0.30 145 / 40%;
+        /* Glass surface */
+        --glass: 1 0 0 / 10%;
+        --glass-border: 1 0 0 / 20%;
+    }
+
+    .dark {
+        /* Dark mode - deep black with neon green accents */
+        --background: 0.10 0 0;
+        --foreground: 0.98 0 0;
+        --card: 0.15 0 0 / 40%;
+        --card-foreground: 0.98 0 0;
+        --popover: 0.15 0 0;
+        --popover-foreground: 0.98 0 0;
+        --primary: 0.98 0 0;
+        --primary-foreground: 0.10 0 0;
+        --secondary: 0.20 0 0;
+        --secondary-foreground: 0.98 0 0;
+        --muted: 0.20 0 0;
+        --muted-foreground: 0.65 0 0;
+        --accent: 0.25 0 0;
+        --accent-foreground: 0.98 0 0;
+        --destructive: 0.60 0.25 27;
+        --destructive-foreground: 0.98 0 0;
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.75 0.30 145;
+        /* Neon green accent */
+        --neon: 0.75 0.30 145;
+        --neon-glow: 0.75 0.30 145 / 30%;
+        /* Glass surface */
+        --glass: 1 0 0 / 5%;
+        --glass-border: 1 0 0 / 15%;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'SF Pro Display', system-ui, sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+@layer utilities {
+    .glass-surface {
+        background: oklch(var(--glass));
+        backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid oklch(var(--glass-border));
+    }
+
+    .neon-glow {
+        box-shadow: 0 0 20px oklch(var(--neon-glow)),
+                    0 0 40px oklch(var(--neon-glow) / 20%);
+    }
+
+    .neon-text {
+        color: oklch(var(--neon));
+        text-shadow: 0 0 10px oklch(var(--neon-glow));
+    }
+
+    .text-balance {
+        text-wrap: balance;
+    }
+}

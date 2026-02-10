@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-any-previously-uploaded-older-portfolio-video-embeds-so-that-the-portfolio-section-only-includes-the-user-provided-video-links-and-does-not-include-the-prior-placeholder-older-video-embed-specifically-remove-the-existing-embed-url-https-www-youtube-com-embed-dqw4w9wgxcq-from-the-portfolio-data-so-it-no-longer-appears-in-the-grid-and-cannot-be-opened-in-the-preview-dialog",
+      "featureTitle": "Remove any previously uploaded/older portfolio video embeds so that the Portfolio section only includes the user-provided video links (and does not include the prior placeholder/older video embed). Specifically, remove the existing embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ` from the portfolio data so it no longer appears in the grid and cannot be opened in the preview dialog.",
+      "files": [
+        "frontend/src/components/portfolio/portfolioData.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

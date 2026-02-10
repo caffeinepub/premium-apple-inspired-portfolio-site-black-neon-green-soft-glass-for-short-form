@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove older placeholder portfolio video embed",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "summary": "Remove the legacy placeholder YouTube embed from the Portfolio data so only the user-provided video links remain visible/playable in the grid and preview dialog.",
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/portfolioData.ts` no longer contains the video embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ`.",
+        "The Portfolio grid and preview dialog no longer show/play any video other than the user-provided links already added to the portfolio (YouTube Shorts/Instagram Reel URLs previously provided).",
+        "No changes are required to backend canisters; the update is implemented entirely in the frontend data/content."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/portfolioData.ts",
+          "operation": "modify",
+          "description": "Remove the portfolio item (or at minimum its `media.video.url`) that contains the legacy placeholder embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ`, ensuring it cannot appear in the Portfolio grid or be opened/played in `PortfolioPreviewDialog` while keeping existing categories and UI behavior unchanged."
+        }
+      ]
+    }
+  ]
+}

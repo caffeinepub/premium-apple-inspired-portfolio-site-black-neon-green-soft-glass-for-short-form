@@ -1,2 +1,3 @@
-# premium-apple-inspired-portfolio-site-black-neon-green-soft-glass-for-short-form
-Exported from Caffeine project: Premium Apple-inspired portfolio site (black + neon green soft-glass) for short-form video editor &amp; graphic designer
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,38 @@
+{
+  "kind": "build_request",
+  "title": "Remove previously uploaded portfolio videos",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "text": "Remove any previously uploaded/older portfolio video embeds so that the Portfolio section only includes the user-provided video links (and does not include the prior placeholder/older video embed). Specifically, remove the existing embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ` from the portfolio data so it no longer appears in the grid and cannot be opened in the preview dialog.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "and remove previous videos uploaded before"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/components/portfolio/portfolioData.ts` no longer contains the video embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ`.",
+        "The Portfolio grid and preview dialog no longer show/play any video other than the user-provided links already added to the portfolio (YouTube Shorts/Instagram Reel URLs previously provided).",
+        "No changes are required to backend canisters; the update is implemented entirely in the frontend data/content."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend immutable paths: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`, or anything in `frontend/src/components/ui`.",
+    "Maintain the existing portfolio categories and UI behavior (grid layout, video indicator, preview dialog) while only removing older video entries."
+  ],
+  "nonGoals": [
+    "Adding new videos beyond the user-provided links.",
+    "Implementing a backend-driven CMS or upload flow for portfolio videos.",
+    "Changing the overall visual theme or section ordering."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

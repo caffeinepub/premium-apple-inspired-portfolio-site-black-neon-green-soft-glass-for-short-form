@@ -1,0 +1,23 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-10T08:16:52.103Z",
+  "summary": "The diff shows edits primarily in `frontend/src/components/portfolio/portfolioData.ts`, with additional modifications to `frontend-file-summaries.txt` and `project_state.json`. In the visible portion of `portfolioData.ts`, the specific old embed URL is not present, but the file is truncated so complete removal cannot be fully verified from the provided snippet alone.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Updated repository metadata/state files (`frontend-file-summaries.txt` and `project_state.json`), which were not requested as part of removing an older portfolio video embed.",
+      "reason": "BuildRequest focuses on removing a specific portfolio video embed from frontend portfolio data; it does not request updating project summary/state or file summary inventories.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "project_state.json"
+      ]
+    }
+  ],
+  "confidence": 0.63,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/portfolio/portfolioData.ts",
+    "project_state.json"
+  ]
+}
