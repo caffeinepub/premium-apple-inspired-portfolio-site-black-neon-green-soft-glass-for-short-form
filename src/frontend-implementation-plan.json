@@ -1,21 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove older placeholder portfolio video embed",
+  "title": "Darken global background via CSS overlay",
   "requirements": [
     {
-      "id": "REQ-19",
-      "summary": "Remove the legacy placeholder YouTube embed from the Portfolio data so only the user-provided video links remain visible/playable in the grid and preview dialog.",
+      "id": "REQ-1",
+      "summary": "Darken the site-wide background images on desktop and mobile/portrait by layering a dark gradient/overlay above the existing background images while preserving current fixed/cover/no-repeat behavior and keeping foreground + bubble decorations visible.",
       "acceptanceCriteria": [
-        "`frontend/src/components/portfolio/portfolioData.ts` no longer contains the video embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ`.",
-        "The Portfolio grid and preview dialog no longer show/play any video other than the user-provided links already added to the portfolio (YouTube Shorts/Instagram Reel URLs previously provided).",
-        "No changes are required to backend canisters; the update is implemented entirely in the frontend data/content."
+        "On desktop sizes, the global background (currently set on the `html` element in `frontend/src/index.css`) is visibly darker than before while still showing the neon green lines/bubbles.",
+        "On mobile/portrait sizes (the existing `@media (max-width: 768px), (orientation: portrait)` rule), the mobile background is also visibly darker than before.",
+        "The background still uses cover, centered positioning, no-repeat, and fixed attachment as it did previously.",
+        "Foreground sections and the existing bubble overlay decorations remain visible and are not obscured by the darkening approach (i.e., darkening is applied only to the background rendering)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/portfolio/portfolioData.ts",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Remove the portfolio item (or at minimum its `media.video.url`) that contains the legacy placeholder embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ`, ensuring it cannot appear in the Portfolio grid or be opened/played in `PortfolioPreviewDialog` while keeping existing categories and UI behavior unchanged."
+          "description": "Update the global `html` background CSS to render a darker background by stacking a dark overlay/gradient as the first `background-image` layer, followed by the existing image URL. Preserve existing behavior (cover, centered position, no-repeat, fixed attachment). Apply the same approach in the existing mobile/portrait media rule while keeping the image asset paths exactly as `/assets/generated/site-background-neon-bubbles.dim_1920x1080.png` and `/assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png`."
         }
       ]
     }

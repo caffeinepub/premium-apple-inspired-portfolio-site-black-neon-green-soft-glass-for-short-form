@@ -1,170 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
-  "summary": "Modern, high-end Apple-inspired portfolio website for a short-form video editor/reels editor/graphic designer with black + neon green “soft glass/bubble” UI, smooth motion, and responsive sections (Hero, About, Portfolio, Services, Testimonials, Contact).",
-  "architectural_notes": [
-    "Mobile-first, fully responsive layout with high-contrast readability and modern spacing.",
-    "Visual style: mostly black background with subtle gradients and floating bubble elements; soft-glass UI with rounded corners, soft shadows, and subtle depth.",
-    "Brand colors: black base with bright neon green accents for buttons/highlights/hover states.",
-    "Typography: bold modern sans-serif with strong hierarchy.",
-    "Motion: smooth scroll and subtle hover/transition animations (no flashy effects).",
-    "Portfolio content update: add specific external video links (YouTube Shorts + Instagram Reels) to the correct portfolio categories and render via existing video/preview support.",
-    "Portfolio content management: when updating with new user-provided video links, remove/replace any previously uploaded/older video items so the portfolio reflects only the latest set."
-  ],
-  "known_issues": [
-    "User requested About Me photo replacement but the actual image file was not provided in the conversation payload."
-  ],
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-implement-a-single-page-fully-responsive-portfolio-website-with-these-sections-in-order-home-hero-about-me-portfolio-services-testimonials-placeholder-contact",
-      "title": "Implement a single-page, fully responsive portfolio website with these sections in order: Home/Hero, About Me, Portfolio, Services, Testimonials (placeholder), Contact.",
+      "id": "feature-make-the-site-wide-background-image-render-darker-so-foreground-content-and-the-bubble-overlay-decorations-stand-out-more-by-adding-a-dark-overlay-gradient-on-top-of-the-existing-background-images-for-both-desktop-and-mobile-portrait-breakpoints-without-changing-the-image-filenames-or-removing-the-fixed-cover-no-repeat-behavior",
+      "title": "Make the site-wide background image render darker so foreground content and the bubble overlay decorations stand out more, by adding a dark overlay/gradient on top of the existing background images for both desktop and mobile/portrait breakpoints (without changing the image filenames or removing the fixed/cover/no-repeat behavior).",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-apply-a-clean-bold-premium-apple-inspired-visual-theme-using-a-black-background-subtle-gradients-neon-green-accents-and-a-soft-glass-bubble-ui-style-rounded-corners-soft-shadows-subtle-depth-smooth-transitions-ensure-high-contrast-and-readability",
-      "title": "Apply a clean, bold, premium, Apple-inspired visual theme using a black background, subtle gradients, neon green accents, and a soft-glass/bubble UI style (rounded corners, soft shadows, subtle depth, smooth transitions). Ensure high contrast and readability.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-smooth-scrolling-navigation-between-sections-e-g-header-links-or-in-page-ctas-and-apply-subtle-motion-smooth-scroll-behavior-soft-hover-animations-and-gentle-section-element-transitions-no-flashy-effects",
-      "title": "Add smooth scrolling navigation between sections (e.g., header links or in-page CTAs) and apply subtle motion: smooth scroll behavior, soft hover animations, and gentle section/element transitions (no flashy effects).",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-the-home-hero-section-with-a-large-bold-headline-containing-the-name-and-title-a-one-line-description-focused-on-results-creativity-a-primary-cta-button-labeled-view-portfolio-that-scrolls-to-the-portfolio-section-and-a-secondary-cta-labeled-contact-me-that-scrolls-to-the-contact-section-include-floating-bubble-glass-decorative-elements-in-the-hero-background",
-      "title": "Create the Home/Hero section with: a large bold headline containing the name and title, a one-line description focused on results/creativity, a primary CTA button labeled “View Portfolio” that scrolls to the Portfolio section, and a secondary CTA labeled “Contact Me” that scrolls to the Contact section. Include floating bubble/glass decorative elements in the hero background.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-the-about-me-section-with-a-clean-two-column-layout-image-text-that-collapses-gracefully-on-mobile-include-a-short-professional-bio-emphasizing-creativity-storytelling-and-social-media-impact-include-a-tools-area-rendered-as-icons-or-badges-for-premiere-pro-after-effects-photoshop-illustrator",
-      "title": "Create the About Me section with a clean two-column layout (image + text) that collapses gracefully on mobile. Include a short professional bio emphasizing creativity, storytelling, and social media impact. Include a tools area rendered as icons or badges for: Premiere Pro, After Effects, Photoshop, Illustrator.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-the-portfolio-section-divided-into-three-clear-categories-short-form-reels-instagram-tiktok-youtube-shorts-video-editing-projects-and-graphic-design-thumbnails-for-each-category-render-a-responsive-grid-of-project-tiles-with-thumbnails-hover-effects-that-reveal-project-type-and-click-to-open-preview-expanded-view-modal-or-drawer-use-placeholder-project-items-and-placeholder-thumbnails-if-no-real-assets-are-provided",
-      "title": "Create the Portfolio section divided into three clear categories: Short-Form Reels (Instagram, TikTok, YouTube Shorts), Video Editing Projects, and Graphic Design / Thumbnails. For each category, render a responsive grid of project tiles with thumbnails, hover effects that reveal project type, and click-to-open preview/expanded view (modal or drawer). Use placeholder project items and placeholder thumbnails if no real assets are provided.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-the-services-section-with-bold-service-cards-for-short-form-video-editing-reels-editing-motion-graphics-thumbnail-design-social-media-content-editing-cards-must-use-bright-neon-green-accents-on-hover-focus-border-glow-background-accent-while-keeping-overall-premium-minimal-styling",
-      "title": "Create the Services section with bold service cards for: Short-Form Video Editing, Reels Editing, Motion Graphics, Thumbnail Design, Social Media Content Editing. Cards must use bright neon green accents on hover/focus (border/glow/background accent) while keeping overall premium minimal styling.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-testimonials-section-as-an-optional-placeholder-with-minimal-clean-quote-cards-containing-placeholder-client-feedback-text",
-      "title": "Create a Testimonials section as an optional placeholder with minimal, clean quote cards containing placeholder client feedback text.",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-contact-section-containing-a-heading-cta-let-s-work-together-a-simple-contact-form-with-fields-name-email-message-and-social-links-for-instagram-youtube-and-behance-form-submission-should-validate-required-fields-and-show-an-on-page-success-state-confirmation-no-external-email-integration-required",
-      "title": "Create a Contact section containing: a heading/CTA “Let’s Work Together”, a simple contact form with fields Name, Email, Message, and social links for Instagram, YouTube, and Behance. Form submission should validate required fields and show an on-page success state/confirmation (no external email integration required).",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-an-optional-dark-light-mode-toggle-while-keeping-neon-green-as-the-consistent-brand-accent-color-in-both-modes-default-to-dark-mode",
-      "title": "Add an optional dark/light mode toggle while keeping neon green as the consistent brand accent color in both modes. Default to dark mode.",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-generated-static-visual-assets-for-the-bubble-soft-glass-background-and-use-them-in-the-ui-via-frontend-static-assets-served-from-frontend-public-assets-generated-without-routing-images-through-the-backend",
-      "title": "Add generated static visual assets for the bubble/soft-glass background and use them in the UI via frontend static assets (served from frontend/public/assets/generated), without routing images through the backend.",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-extend-the-portfolio-item-data-model-to-support-real-video-media-in-addition-to-static-thumbnails-so-each-portfolio-item-can-optionally-define-a-video-source-either-an-external-embed-url-or-a-locally-served-video-file-while-keeping-backward-compatibility-with-existing-placeholder-image-only-items",
-      "title": "Extend the portfolio item data model to support real video media in addition to static thumbnails, so each portfolio item can optionally define a video source (either an external embed URL or a locally-served video file) while keeping backward compatibility with existing placeholder image-only items.",
-      "reqIds": [
-        "REQ-12"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-portfolio-preview-experience-to-play-videos-when-a-selected-portfolio-item-includes-a-video-source-and-otherwise-continue-showing-the-current-image-preview-ensure-the-video-preview-is-responsive-accessible-and-matches-the-existing-glass-neon-styling",
-      "title": "Update the Portfolio preview experience to play videos when a selected portfolio item includes a video source, and otherwise continue showing the current image preview; ensure the video preview is responsive, accessible, and matches the existing glass/neon styling.",
-      "reqIds": [
-        "REQ-13"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-portfolio-grid-tiles-to-visually-indicate-which-portfolio-items-have-a-playable-video-without-changing-the-overall-layout-and-provide-a-clear-user-facing-hint-in-english-in-the-portfolio-section-that-videos-can-be-added-via-links-embeds-or-local-files",
-      "title": "Update the Portfolio grid tiles to visually indicate which portfolio items have a playable video (without changing the overall layout), and provide a clear, user-facing hint in English in the Portfolio section that videos can be added via links/embeds or local files.",
-      "reqIds": [
-        "REQ-14"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-hero-headline-to-include-a-new-top-line-of-text-exactly-i-m-arnav-displayed-above-the-existing-title-text-creative-video-editor-and-graphic-designer-preserving-the-current-two-line-title-layout-and-styling-including-the-neon-styling-on-graphic-designer",
-      "title": "Update the Hero headline to include a new top line of text exactly \"i'm Arnav\" displayed above the existing title text \"Creative Video Editor\" and \"& Graphic Designer\", preserving the current two-line title layout and styling (including the neon styling on \"& Graphic Designer\").",
-      "reqIds": [
-        "REQ-15"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-populate-the-portfolio-data-for-the-correct-categories-using-the-user-provided-video-links-so-the-new-items-appear-in-the-grid-and-open-as-playable-video-embeds-in-the-preview-dialog-add-to-short-form-reels-https-www-youtube-com-shorts-mmnpexwv1cs-https-www-instagram-com-reel-dt3dxlij9o4-https-www-youtube-com-shorts-ocxmrt8zfyk-add-to-video-editing-projects-https-www-youtube-com-shorts-knggq5d6x0o-https-www-youtube-com-shorts-x72u5z1izr8-https-www-youtube-com-shorts-wg4foh4edzk-add-to-graphic-design-https-www-youtube-com-shorts-200kcw0dm88",
-      "title": "Populate the Portfolio data for the correct categories using the user-provided video links, so the new items appear in the grid and open as playable video embeds in the preview dialog.\n\nAdd to **Short-Form Reels**:\n- https://www.youtube.com/shorts/MMNPExwV1Cs\n- https://www.instagram.com/reel/DT3DXlIj9O4/\n- https://www.youtube.com/shorts/oCXmRT8zFyk\n\nAdd to **Video Editing Projects**:\n- https://www.youtube.com/shorts/KNgGQ5D6X0o\n- https://www.youtube.com/shorts/X72u5Z1izr8\n- https://www.youtube.com/shorts/wg4fOH4edzk\n\nAdd to **Graphic Design**:\n- https://www.youtube.com/shorts/200KCw0Dm88",
-      "reqIds": [
-        "REQ-16"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-embed-url-normalization-so-the-provided-youtube-shorts-and-instagram-reel-urls-render-correctly-as-iframe-embeds-in-the-portfolio-preview-dialog",
-      "title": "Update embed URL normalization so the provided YouTube Shorts and Instagram Reel URLs render correctly as iframe embeds in the portfolio preview dialog.",
-      "reqIds": [
-        "REQ-17"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-replace-the-about-section-profile-photo-with-the-user-uploaded-image-file-group-1-png-using-it-as-a-static-frontend-asset-and-keeping-the-current-responsive-layout-styling-intact",
-      "title": "Replace the About section profile photo with the user-uploaded image file `group 1.png`, using it as a static frontend asset and keeping the current responsive layout/styling intact.",
-      "reqIds": [
-        "REQ-18"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-any-previously-uploaded-older-portfolio-video-embeds-so-that-the-portfolio-section-only-includes-the-user-provided-video-links-and-does-not-include-the-prior-placeholder-older-video-embed-specifically-remove-the-existing-embed-url-https-www-youtube-com-embed-dqw4w9wgxcq-from-the-portfolio-data-so-it-no-longer-appears-in-the-grid-and-cannot-be-opened-in-the-preview-dialog",
-      "title": "Remove any previously uploaded/older portfolio video embeds so that the Portfolio section only includes the user-provided video links (and does not include the prior placeholder/older video embed). Specifically, remove the existing embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ` from the portfolio data so it no longer appears in the grid and cannot be opened in the preview dialog.",
-      "reqIds": [
-        "REQ-19"
       ],
       "version": 1
     }
@@ -172,97 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Create responsive site structure with sections: Home/Hero, About, Portfolio, Services, Testimonials (optional placeholder), Contact",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Implement Apple-inspired soft glass/bubble UI styling (black background, neon green accents, rounded elements, soft shadows, subtle gradients, floating bubble elements)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Hero section with headline/title, one-line description, primary CTA (View Portfolio) and secondary CTA (Contact Me)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "About section with bio, two-column layout (image + text), and tools badges/icons (Premiere Pro, After Effects, Photoshop, Illustrator)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "Portfolio section with categories (Short-Form Reels, Video Editing Projects, Graphic Design/Thumbnails) using grid thumbnails, hover reveal, and click-to-expand/preview",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-6",
-      "summary": "Services section with bold service cards and neon green hover accents",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-7",
-      "summary": "Testimonials section placeholder with minimal quote cards",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-8",
-      "summary": "Contact section with form (Name, Email, Message), CTA text, and social links (Instagram, YouTube, Behance)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-9",
-      "summary": "Add smooth transitions/hover animations and smooth scroll with subtle motion (avoid flashy effects)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-10",
-      "summary": "Optional dark/light mode toggle while keeping green as the brand accent color",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-11",
-      "summary": "Add support for including the user’s real video content in the portfolio (replace placeholders with user-provided videos via embeds/links or uploaded files, with appropriate display/preview in the Portfolio section)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-12",
-      "summary": "Update Hero headline to add a new top line text \"i'm Arnav\" above the existing title \"Creative Video Editor & Graphic Designer\"",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-13",
-      "summary": "Populate Portfolio with provided real video links in the correct categories (Short-Form Reels, Video Editing Projects, Graphic Design) and ensure they appear/play correctly in previews",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-14",
-      "summary": "Replace About Me section photo with the user-provided image (update asset and ensure responsive styling remains intact)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-15",
-      "summary": "Remove previously uploaded/older portfolio videos so only the newly provided video links remain in the portfolio sections",
+      "summary": "Make the website background image darker (increase darkness/contrast so bubbles stand out more)",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "gameProjectType": "none",
-  "projectName": "Premium Apple-inspired portfolio site (black + neon green soft-glass) for short-form video editor & graphic designer",
+  "projectName": "Darken the global site background",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-10T08:16:52.105Z",
+  "generatedAt": "2026-02-10T13:27:22.127Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,14 +11,14 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-19",
-        "summary": "Remove any previously uploaded/older portfolio video embeds so that the Portfolio section only includes the user-provided video links (and does not include the prior placeholder/older video embed). Specifically, remove the existing embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ` from the portfolio data so it no longer appears in the grid and cannot be opened in the preview dialog.",
+        "id": "REQ-1",
+        "summary": "Make the site-wide background image render darker so foreground content and the bubble overlay decorations stand out more, by adding a dark overlay/gradient on top of the existing background images for both desktop and mobile/portrait breakpoints (without changing the image filenames or removing the fixed/cover/no-repeat behavior).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/portfolio/portfolioData.ts"
+          "frontend/src/index.css"
         ],
         "matchedFiles": [
-          "frontend/src/components/portfolio/portfolioData.ts"
+          "frontend/src/index.css"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/portfolio/portfolioData.ts",
+    "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

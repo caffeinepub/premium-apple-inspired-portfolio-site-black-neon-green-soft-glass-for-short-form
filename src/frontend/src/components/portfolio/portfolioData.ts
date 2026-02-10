@@ -13,22 +13,6 @@ export interface PortfolioItem {
 export const portfolioData: Record<string, PortfolioItem[]> = {
   shortFormReels: [
     {
-      id: 'reel-2',
-      title: 'Behind The Scenes',
-      type: 'TikTok',
-      category: 'shortFormReels',
-      thumbnail: '/assets/generated/thumb-placeholder-2.dim_800x450.png',
-      description: 'Authentic BTS content showcasing the creative process, building brand connection.'
-    },
-    {
-      id: 'reel-3',
-      title: 'Tutorial Series',
-      type: 'YouTube Shorts',
-      category: 'shortFormReels',
-      thumbnail: '/assets/generated/thumb-placeholder-3.dim_800x450.png',
-      description: 'Educational content series with dynamic editing and clear value delivery.'
-    },
-    {
       id: 'reel-4',
       title: 'Creative Short',
       type: 'YouTube Shorts',
@@ -76,30 +60,6 @@ export const portfolioData: Record<string, PortfolioItem[]> = {
   ],
   videoEditingProjects: [
     {
-      id: 'video-1',
-      title: 'Brand Story',
-      type: 'Commercial',
-      category: 'videoEditingProjects',
-      thumbnail: '/assets/generated/thumb-placeholder-1.dim_800x450.png',
-      description: 'Compelling brand narrative with cinematic editing and emotional storytelling.'
-    },
-    {
-      id: 'video-2',
-      title: 'Event Highlight',
-      type: 'Event Coverage',
-      category: 'videoEditingProjects',
-      thumbnail: '/assets/generated/thumb-placeholder-2.dim_800x450.png',
-      description: 'Fast-paced event recap capturing the energy and excitement of the occasion.'
-    },
-    {
-      id: 'video-3',
-      title: 'Product Demo',
-      type: 'Explainer',
-      category: 'videoEditingProjects',
-      thumbnail: '/assets/generated/thumb-placeholder-3.dim_800x450.png',
-      description: 'Clear, engaging product demonstration with motion graphics and annotations.'
-    },
-    {
       id: 'video-4',
       title: 'Professional Edit',
       type: 'YouTube Shorts',
@@ -146,30 +106,6 @@ export const portfolioData: Record<string, PortfolioItem[]> = {
     }
   ],
   graphicDesign: [
-    {
-      id: 'design-1',
-      title: 'YouTube Thumbnail Pack',
-      type: 'Thumbnail Design',
-      category: 'graphicDesign',
-      thumbnail: '/assets/generated/thumb-placeholder-1.dim_800x450.png',
-      description: 'High-converting thumbnail designs that increased CTR by 45%.'
-    },
-    {
-      id: 'design-2',
-      title: 'Social Media Graphics',
-      type: 'Brand Assets',
-      category: 'graphicDesign',
-      thumbnail: '/assets/generated/thumb-placeholder-2.dim_800x450.png',
-      description: 'Cohesive social media graphics maintaining brand consistency across platforms.'
-    },
-    {
-      id: 'design-3',
-      title: 'Motion Graphics Pack',
-      type: 'Animated Elements',
-      category: 'graphicDesign',
-      thumbnail: '/assets/generated/thumb-placeholder-3.dim_800x450.png',
-      description: 'Custom animated elements and transitions for enhanced video production.'
-    },
     {
       id: 'design-4',
       title: 'Design Showcase',

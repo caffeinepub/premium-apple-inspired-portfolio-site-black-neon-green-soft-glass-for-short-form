@@ -1,35 +1,37 @@
 {
   "kind": "build_request",
-  "title": "Remove previously uploaded portfolio videos",
+  "title": "Darken the global site background",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-19",
-      "text": "Remove any previously uploaded/older portfolio video embeds so that the Portfolio section only includes the user-provided video links (and does not include the prior placeholder/older video embed). Specifically, remove the existing embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ` from the portfolio data so it no longer appears in the grid and cannot be opened in the preview dialog.",
+      "id": "REQ-1",
+      "text": "Make the site-wide background image render darker so foreground content and the bubble overlay decorations stand out more, by adding a dark overlay/gradient on top of the existing background images for both desktop and mobile/portrait breakpoints (without changing the image filenames or removing the fixed/cover/no-repeat behavior).",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "and remove previous videos uploaded before"
+          "make background darker"
         ]
       },
       "acceptanceCriteria": [
-        "`frontend/src/components/portfolio/portfolioData.ts` no longer contains the video embed URL `https://www.youtube.com/embed/dQw4w9WgXcQ`.",
-        "The Portfolio grid and preview dialog no longer show/play any video other than the user-provided links already added to the portfolio (YouTube Shorts/Instagram Reel URLs previously provided).",
-        "No changes are required to backend canisters; the update is implemented entirely in the frontend data/content."
+        "On desktop sizes, the global background (currently set on the `html` element in `frontend/src/index.css`) is visibly darker than before while still showing the neon green lines/bubbles.",
+        "On mobile/portrait sizes (the existing `@media (max-width: 768px), (orientation: portrait)` rule), the mobile background is also visibly darker than before.",
+        "The background still uses cover, centered positioning, no-repeat, and fixed attachment as it did previously.",
+        "Foreground sections and the existing bubble overlay decorations remain visible and are not obscured by the darkening approach (i.e., darkening is applied only to the background rendering)."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend immutable paths: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`, or anything in `frontend/src/components/ui`.",
-    "Maintain the existing portfolio categories and UI behavior (grid layout, video indicator, preview dialog) while only removing older video entries."
+    "Do not modify any files under `frontend/src/components/ui` (read-only).",
+    "Do not modify files listed as immutable paths in SYSTEM_CONTEXT (e.g., `frontend/src/main.tsx`, `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useActor.ts`).",
+    "Keep the existing background image asset paths exactly as they are: `/assets/generated/site-background-neon-bubbles.dim_1920x1080.png` and `/assets/generated/site-background-neon-bubbles-mobile.dim_1080x1920.png`.",
+    "No backend changes (Motoko) are needed for this request."
   ],
   "nonGoals": [
-    "Adding new videos beyond the user-provided links.",
-    "Implementing a backend-driven CMS or upload flow for portfolio videos.",
-    "Changing the overall visual theme or section ordering."
+    "Regenerating or editing the background image assets themselves (apply darkening via CSS instead).",
+    "Changing bubble overlay image assets or their positions/opacities unless required to prevent unintended occlusion from the darkening overlay."
   ],
   "imageRequirements": {
     "required": [],

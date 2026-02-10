@@ -16,7 +16,7 @@ export function AboutSection() {
         <div className="order-2 md:order-1">
           <GlassCard hover className="overflow-hidden aspect-square">
             <img
-              src="/assets/group 1.png"
+              src="/assets/image.png"
               alt="Arnav - Video Editor and Graphic Designer"
               className="w-full h-full object-cover rounded-2xl"
             />
